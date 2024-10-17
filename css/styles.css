@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('/img/fondito.png'); /* Cambia esta ruta a la ubicación de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía alegre */
+}
+
+header {
+    background-color: #f8bbd0; /* Color pastel para el header */
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky; /* Hace que el header se quede en la parte superior al hacer scroll */
+    top: 0; /* Posiciona el header en la parte superior */
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d81b60; /* Color de los enlaces */
+    font-weight: bold;
+}
+
+section {
+    flex: 1; /* Permite que la sección principal ocupe el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px; /* Añade un margen para separar del borde */
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block;
+}
+
+.carousel-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em; /* Tamaño del texto */
+    color: #060606; /* Color del texto */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(253, 246, 254, 0.5); /* Fondo semi-transparente */
+    color: rgb(243, 145, 204);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#game-container {
+    margin-top: 20px;
+}
+
+#palabra {
+    font-size: 2em;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+#mensaje {
+    color: #ff5252; /* Color rojo para mensajes */
+    margin: 10px 0;
+}
+
+#ahorcado {
+    background-color: #f8bbd0; /* Color de fondo para el dibujo del ahorcado */
+    border: 2px solid #d81b60; /* Borde del área del dibujo */
+    border-radius: 5px;
+    padding: 20px; /* Aumenta el espaciado interno */
+    min-height: 200px; /* Aumenta la altura mínima */
+    min-width: 300px; /* Aumenta la anchura mínima */
+    overflow: auto; /* Permite el desplazamiento si el contenido es muy grande */
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-family: monospace; /* Usa una fuente monoespaciada para mejor alineación */
+    margin-top: 20px; /* Ajusta el margen superior según lo necesites */
+}
+
+#letras-usadas {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #90caf9; /* Color de borde azul claro */
+    border-radius: 5px;
+    width: 70px; /* Aumenta el ancho para que quepa mejor */
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Añade margen inferior para separar del botón */
+}
+
+button {
+    background-color: #ffab91; /* Color pastel naranja claro */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Añade margen superior para separar del input */
+}
+
+button:hover {
+    background-color: #f4a7e7; /* Cambia de color al pasar el ratón */
+    color: white; /* Cambia el color del texto al pasar el ratón */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    background-color: #f8bbd0; /* Color rosado para el footer */
+    padding: 10px 0; /* Espaciado interno para el footer */
+}
+
+h1 {
+    color: #452742; /* Color pastel rosa */
+    font-size: 3em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace que la fuente sea más gruesa */
+    margin-bottom: 20px;
+}
+
+/* Estilo para la sección de bienvenida */
+#welcome {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(193, 231, 237, 0.8); /* Fondo suave para destacar el texto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#welcome h2 {
+    font-size: 2em; /* Tamaño del título */
+    color: #f08f8f; /* Color del título */
+}
+
+#welcome p {
+    font-size: 1.2em; /* Tamaño del párrafo */
+    color: #666; /* Color del texto */
+}

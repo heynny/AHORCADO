@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/creditos.html">Créditos</a></li>
+                <li><a href="/juego.html">Juego</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImages">
+                <img src="/img/img 1 .png" alt="Imagen 1">
+                <img src="/img/img 2.png" alt="Imagen 2">
+                <img src="/img/img 3.png" alt="Imagen 3">
+            </div>
+            <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <div class="carousel-text">
+            <h2>¡Bienvenido al Juego del Ahorcado Felino!</h2>
+            <p>¡Diviértete adivinando la palabra secreta antes de que se termine el juego! ¿Estás listo?</p>
+        </div>
+    </section>
+
+    <!-- Sección de bienvenida centrada -->
+    <section id="welcome">
+        <h2>¡Bienvenido al Ahorcado Felino! 🐾</h2>
+        <p>¿Estás listo para una aventura adorable que pondrá a prueba tu ingenio? En nuestra versión del clásico juego de Ahorcado, nos adentramos en el mundo de los gatitos, donde cada letra que adivinas no solo te acerca a la victoria, ¡sino que también desata la ternura de nuestros amigos peludos!</p>
+
+        <p>Imagina un escenario suave y acogedor, lleno de suaves cojines y juguetones ovillos de lana. Cada vez que te enfrentas a un nuevo desafío, un pequeño gatito te observa con sus grandes ojos curiosos, animándote a adivinar la palabra correcta. Por cada error, nuestro valiente gatito se prepara para un suave salto, y cada acierto lo hace ronronear de alegría. ¡No te preocupes! Cada intento es una oportunidad para aprender y divertirte, ya que cada palabra se convierte en un nuevo juego de risas y sorpresas.</p>
+
+        <h3>Características del Ahorcado Felino:</h3>
+        <ul>
+            <li><strong>Palabras Adorables:</strong> Desde nombres de gatitos hasta juguetes y deliciosas golosinas, ¡cada palabra es un mundo de ternura!</li>
+            <li><strong>Animaciones Lindas:</strong> Observa cómo nuestro gatito se mueve y reacciona a tus decisiones. Con cada letra, su personalidad brilla más.</li>
+            <li><strong>Entorno Mágico:</strong> Disfruta de un fondo lleno de colores suaves y divertidos elementos que crean un ambiente acogedor y divertido.</li>
+        </ul>
+
+        <p>Con cada letra que adivinas, no solo avanzas en el juego, ¡sino que también construyes un vínculo especial con nuestro amigo felino! Si aciertas, él celebrará haciendo saltos adorables; si no, ¡no te preocupes! Siempre hay otra palabra lista para ser descubierta. El Ahorcado Felino no es solo un juego; es una experiencia que combina desafío y ternura en un solo paquete.</p>
+
+        <p>Así que reúne a tus amigos y familiares, y prepárate para disfrutar de horas de diversión en el Ahorcado Felino. ¡Cada intento es un nuevo recuerdo lleno de risas y miau-ravillas!</p>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados &copy; 2024 Creado By Heynny</p>
+    </footer>
+    <script src="/js/script.js"></script>
+    <script>
+        let currentIndex = 0;
+
+        function changeSlide(direction) {
+            const images = document.querySelectorAll('.carousel-images img');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            const offset = -currentIndex * 100; // Desplazar el carrusel
+            document.getElementById('carouselImages').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
